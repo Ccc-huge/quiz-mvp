@@ -1,0 +1,167 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* ===== 默认主题（浅色） ===== */
+:root {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* 背景与文字 */
+  --bg-color: #f7f7f7;
+  --card-bg: #ffffff;
+  --text-color: #1f2937;
+  --text-secondary: #6b7280;
+
+  /* 主色调 */
+  --primary-color: #2563eb;
+  --primary-hover: #1d4ed8;
+  --primary-light: #e0e7ff;
+
+  /* 边框 */
+  --border-color: #e5e7eb;
+
+  /* 顶栏 */
+  --topbar-bg: linear-gradient(135deg, #34b6d7, #637bae);
+  --topbar-text: #ffffff;
+
+  /* 状态颜色 */
+  --success-color: #22c55e;
+  --success-bg: #ecfdf5;
+  --error-color: #ef4444;
+  --error-bg: #fef2f2;
+  --warning-color: #f59e0b;
+  --warning-bg: #fffbeb;
+
+  /* 刷题专用 */
+  --correct-bg: #f6ffed;
+  --correct-border: #22c55e;
+  --correct-color: #22c55e;
+  --wrong-bg: #fff1f0;
+  --wrong-border: #ef4444;
+  --wrong-color: #ef4444;
+  --marked-bg: #fff7e6;
+  --marked-border: #f59e0b;
+  --marked-color: #f59e0b;
+  --pending-bg: #f3f4f6;
+  --pending-border: #d1d5db;
+}
+
+/* ===== 暗黑主题 ===== */
+[data-theme="dark"] {
+  --bg-color: #0f172a;
+  --card-bg: #1e293b;
+  --text-color: #e5e7eb;
+  --text-secondary: #94a3b8;
+
+  --primary-color: #3b82f6;
+  --primary-hover: #2563eb;
+  --primary-light: #1e3a8a;
+
+  --border-color: #334155;
+
+  --topbar-bg: linear-gradient(135deg, #020617, #1e3a8a);
+  --topbar-text: #e5e7eb;
+
+  --success-color: #4ade80;
+  --success-bg: #064e3b;
+  --error-color: #f87171;
+  --error-bg: #7f1d1d;
+  --warning-color: #fbbf24;
+  --warning-bg: #78350f;
+
+  --correct-bg: #022c22;
+  --correct-border: #4ade80;
+  --correct-color: #4ade80;
+  --wrong-bg: #450a0a;
+  --wrong-border: #f87171;
+  --wrong-color: #f87171;
+  --marked-bg: #451a03;
+  --marked-border: #fbbf24;
+  --marked-color: #fbbf24;
+  --pending-bg: #1f2937;
+  --pending-border: #4b5563;
+}
+
+/* 页面背景 */
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: var(--bg-color);
+  color: var(--text-color);
+  transition: background 0.3s, color 0.3s;
+}
+
+#app {
+  min-height: 100vh;
+}
+
+/* 通用链接 */
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* 通用按钮 */
+button {
+  font-family: inherit;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+/* 输入框 */
+input,
+select,
+textarea {
+  font-family: inherit;
+}
+
+/* 卡片通用样式 */
+.card {
+  background: var(--card-bg);
+  border-radius: 12px;
+  padding: 16px;
+  border: 1px solid var(--border-color);
+  transition: background 0.3s, border-color 0.3s;
+}
+
+/* 顶栏 */
+.topbar-inner {
+  background: var(--topbar-bg);
+  color: var(--topbar-text);
+}
+
+/* 登录按钮 */
+.login-btn,
+.btn-primary {
+  background: var(--primary-color);
+  color: #fff;
+  border: none;
+}
+
+.login-btn:hover,
+.btn-primary:hover {
+  background: var(--primary-hover);
+}
+
+/* 次要文字 */
+.text-secondary {
+  color: var(--text-secondary);
+}
+
+/* 全局过渡动画 */
+* {
+  transition: background 0.3s, color 0.3s, border-color 0.3s;
+}
